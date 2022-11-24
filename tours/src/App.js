@@ -1,12 +1,14 @@
-import { useState } from "react";
-import data from "./data";
-import List from "./list";
+import {  useState } from "react";
 import "./app.css"
+import Tours from "./tours";
+import data from "./data.js"
 
 function App() {
 
-  const [tour,setTour]=useState(data)
-  const [showMore,setShowMore]=useState(false)
+  const [tours,setTour]=useState(data)
+
+
+
 
 
   return (
@@ -15,8 +17,8 @@ function App() {
     <div className="App">
 
     <div className="container">
-      <h2>Our Tours</h2>
-      <List tours={tour} showMore={showMore} setShowMore={setShowMore}></List>
+      {console.log(tours)}
+      <Tours tours={tours}></Tours>
      </div>
 
      

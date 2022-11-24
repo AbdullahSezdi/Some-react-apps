@@ -4,7 +4,7 @@ export default[
         "name":"Otobüslü Kapadokya Turu",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum leo vel orci porta non pulvinar neque. Sed id semper risus in hendrerit gravida rutrum quisque non. Pharetra vel turpis nunc eget. Mattis pellentesque id nibh tortor id. Congue nisi vitae suscipit tellus mauris. Interdum velit laoreet id donec ultrices tincidunt arcu. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Aliquam nulla facilisi cras fermentum. Donec enim diam vulputate ut pharetra sit. Fermentum dui faucibus in ornare quam viverra. Phasellus egestas tellus rutrum tellus pellentesque. Id porta nibh venenatis cras sed felis. Amet justo donec enim diam vulputate ut pharetra.",
         "image":"https://cdn.tatilsepeti.com/Files/TurResim/96860/tsr96860637188535330130564.jpg",
-        "price":"1,255",
+        "price":1225,
 
     },
     {
