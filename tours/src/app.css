@@ -36,7 +36,7 @@ body{
 
 .t-desc{
     padding: 0px 30px 20px 30px;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .price{
@@ -53,4 +53,26 @@ body{
     border-radius: 2px;
     margin-right: 50px;
     font-size: 1.12rem;
+}
+
+.btn{
+    border: 0;
+    background-color: white;
+    color: blue;
+    font-size: 12px;
+}
+
+
+.remove-btn{
+    width: 25%;
+    margin: 0px 45px 20px 210px;
+    background-color: white;
+    border: 1px solid red;
+    padding: 6px;
+    border-radius: 5px;
+    letter-spacing: 1.3px;
+}
+.remove-btn:hover{
+    background-color: red;
+    color: white;
 }

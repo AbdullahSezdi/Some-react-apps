@@ -5,20 +5,21 @@ import data from "./data.js"
 
 function App() {
 
-  const [tours,setTour]=useState(data)
 
+  const [tours,setTours]=useState(data)
 
-
+  const removeTours = (id) =>{
+    const newData=tours.filter((tour)=> tour.id !==id)
+    setTours(newData)
+}
 
 
   return (
 
-
     <div className="App">
 
     <div className="container">
-      {console.log(tours)}
-      <Tours tours={tours}></Tours>
+      <Tours tours={tours} removeTours={removeTours}></Tours>
      </div>
 
      
