@@ -36,7 +36,8 @@ body{
 
 .t-desc{
     padding: 0px 30px 20px 30px;
-    font-size: 14px;
+    font-size: 18px;
+    font-family: 'Poor Story', cursive;
 }
 
 .price{
@@ -67,12 +68,13 @@ body{
     width: 25%;
     margin: 0px 45px 20px 210px;
     background-color: white;
-    border: 1px solid red;
+    border: 1px solid blue;
     padding: 6px;
     border-radius: 5px;
     letter-spacing: 1.3px;
 }
 .remove-btn:hover{
-    background-color: red;
+    background-color: rgb(246, 46, 46);
     color: white;
+    border:1px solid white;
 }

@@ -13,18 +13,21 @@ function App() {
     setTours(newData)
 }
 
+ 
+    return (
 
-  return (
+      <div className="App">
+  
+      <div className="container">
+        <Tours tours={tours} removeTours={removeTours}></Tours>
+       </div>
+  
+       
+      </div>
+    );
+  
 
-    <div className="App">
-
-    <div className="container">
-      <Tours tours={tours} removeTours={removeTours}></Tours>
-     </div>
-
-     
-    </div>
-  );
-}
+  }
+  
 
 export default App;
