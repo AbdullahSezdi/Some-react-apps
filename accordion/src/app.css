@@ -1,0 +1,13 @@
+.card{
+    display: flex;
+    padding: 30px;
+    justify-content:space-around;
+    background-color: aqua;
+    width: 60%;
+    margin: auto;
+}
+
+.question-label{
+    display: flex;
+    justify-content: space-between;
+}
