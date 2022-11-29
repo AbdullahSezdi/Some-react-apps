@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import "./app.css"
 const Question= (question)=>{
     const [more,setMore]=useState(false)
 

@@ -9,7 +9,7 @@ function App() {
 
     return (
         <div className="card">
-            <h3>Questions and answers about login</h3>
+            <h3 className="element-1">Questions and answers about login</h3>
             <div className="question-t">
             {Datas.map((data)=>{
                 return <Question key={data.id} {...data}></Question>

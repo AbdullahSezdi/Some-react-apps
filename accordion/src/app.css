@@ -1,13 +1,57 @@
+body{
+    background-color: blueviolet;
+}
 .card{
     display: flex;
     padding: 30px;
     justify-content:space-around;
-    background-color: aqua;
+    background-color: white;
     width: 60%;
     margin: auto;
+    margin-top: 150px;
+    width: 800px;
 }
 
 .question-label{
     display: flex;
     justify-content: space-between;
+}
+.element-1{
+    width: 200px;
+    margin-top: 40px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.question-t{
+    width: 500px;
+  
+    padding: 3px;
+}
+
+.content{
+    border: 1.5px solid gray;
+    margin: 20px;
+    border-radius: 5px;
+    
+}
+
+.content h2{
+    margin-left: 10px;
+    font-size: 18px;
+    
+}
+.content button{
+    height: 25px;
+    border-radius: 50%;
+    margin: 12px 20px 0px 0px;
+    color: red;
+    
+}
+
+
+.content p{
+    margin-left: 10px;
+    font-size: 16px;
+    
 }
