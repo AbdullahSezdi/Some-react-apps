@@ -1,0 +1,67 @@
+*{
+  background-color: rgb(245, 241, 241);
+}
+
+.title{
+  text-align: center;
+  margin-top: 75px;
+}
+.Container{
+  display: flex;
+
+  width: 85%;
+  margin: auto;
+  background-color: rgb(245, 241, 241);
+}
+
+.button{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 40px 0px 10px;
+  gap: 10px;
+  
+}
+.button button{
+  background-color: white;
+  border: 0px;
+  font-size: 20px;
+  padding: 10px;
+  
+}
+.button button:focus{
+  color: rgba(16, 159, 44, 0.993);
+  
+}
+
+.card{
+  width: 70%;
+  margin: 25px 0px 0px 40px;
+
+
+}
+.card h1,h5{
+
+  font-weight: 100;
+
+}
+.card span{
+  color: rgb(143, 142, 142);
+
+
+}
+
+.company{
+  
+  width: 75px;
+  background-color: rgb(224, 222, 222);
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.li{
+  margin-top: 16px;
+  letter-spacing: 0.4px;
+  font-size: 16px;
+}

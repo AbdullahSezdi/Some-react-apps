@@ -6,7 +6,7 @@ function App() {
 
   const url="https://course-api.com/react-tabs-project"
   const [data,setData]=useState([])
-  const [icerik,setIcerik]=useState("")
+  const [icerik,setIcerik]=useState([])
   
 
   useEffect(()=>{
@@ -22,7 +22,10 @@ function App() {
 
 
   return (
+
     <div className="App">
+    {icerik.length==0 && <h1>Yükleniyor</h1>}
+      <h1 className='title'>Expierence</h1>
     <div className='Container'>
       <div className='button'>
         <button onClick={()=>select(0)}>TOMMY</button>
