@@ -1,15 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./app.css"
 
 
-var count=0;
-const Reviews =(reviews)=>{
 
-    const [data,setData]=useState(reviews["reviews"][0]);
+const Reviews =(props)=>{
+
+    const {reviews} = props 
 
 
-  
-//setData(reviews["reviews"][count])
+    const [count, setCount] = useState(0);
+    const [data,setData]=useState(reviews[count]);
+
+
+    function sagaGec(){
+        if( props.reviews.length-1 > count){
+          setCount(count+1) 
+          setData(reviews[count+1]) 
+
+        }
+        
+    }
+
+    function solaGec(){
+        if(count>0){
+            setCount(count-1)
+            setData(props.reviews[count-1])
+        }
+        
+        
+    }
+    
     
     return (
         <>
@@ -18,10 +38,11 @@ const Reviews =(reviews)=>{
             <h4 className="name">{data.name}</h4>
             <span className="title">{data.job}</span>
             <p className="text">{data.text}</p>
-            {console.log(reviews["reviews"].length)}
-            <button onClick={()=>{reviews["reviews"].length-1>count ? count+=1:<></> }}> sağ'a geç</button> 
-            {console.log(data)}
-            <button>sol'a geç</button>
+           
+
+            <button onClick={sagaGec}> sağ'a geç</button> 
+        
+            <button onClick={solaGec}>sol'a geç</button>
         </div>
         
 

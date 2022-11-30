@@ -1,9 +1,9 @@
-import reviews from "./data.js"
+import data from "./data.js"
 import Reviews from "./review.js";
 
 function App() {
 
-  const data=reviews;
+  
 
   return (
     <div className="App">
