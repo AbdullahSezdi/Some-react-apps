@@ -3,9 +3,9 @@ import "./app.css"
 
 
 
-const Reviews =(props)=>{
+const Reviews =({reviews})=>{
 
-    const {reviews} = props 
+    const {reviews} = props;
 
 
     const [count, setCount] = useState(0);
@@ -16,7 +16,6 @@ const Reviews =(props)=>{
         if( props.reviews.length-1 > count){
           setCount(count+1) 
           setData(reviews[count+1]) 
-
         }
         
     }
