@@ -1,0 +1,8 @@
+.container{
+    width: 50%;
+    background-color: antiquewhite;
+    display: flex;
+    margin: auto;
+    margin-top: 75px;
+    flex-direction: column;
+}
