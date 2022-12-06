@@ -1,6 +1,5 @@
 .container{
     width: 50%;
-   
     display: flex;
     margin: auto;
     margin-top: 75px;
@@ -11,18 +10,45 @@
 
 
 .item-list{
-    margin-top: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    height: 15px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border: 2px solid rgb(196, 196, 196);
+    background-color: rgb(245, 241, 236);
+    border-radius: 4px;
+}
+.container form{
+    border: 2px solid rgb(204, 194, 194);
+    border-radius: 4px;
     padding: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid red;
-    background-color: antiquewhite;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.form-input{
+    padding: 4px 10px;
 }
 
-.item-list p,input{
-    height: 25px;
-    width: 100px;
-
-  
+button{
+    background-color: #9c9cff;
+    border-radius: 5px;
+    padding: 4px;
 }
+
+.input-edit{
+    width: 400px;
+    padding: 4px;
+    text-align: center;
+}
+
+.icons{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+

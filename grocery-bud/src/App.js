@@ -2,7 +2,7 @@
 import './App.css';
 import {useState} from "react"
 import { v4 as uuidv4 } from 'uuid';
-import {FaEdit,FaRegTrashAlt,FaRegSave} from "react-icons/fa"
+import {FaEdit,FaRegTrashAlt,FaRegSave,FaBook} from "react-icons/fa"
 
 
 function App() {
@@ -48,18 +48,22 @@ function App() {
   return (
     <div className="App">
     <div className="container">
-      <h2>Grocery Bud</h2>
+      <div className='title'><h2>Grocery Bud</h2>
       <form>
-        <input value={text}  onChange={(event)=>{setText(event.target.value)}} placeholder="e.g. eggs"></input>
-        {text.length===0 ? <button type='button'>Submit</button>:<button onClick={addBasket} type="button">Submit</button>}
-      </form>
+        <input className='form-input' value={text}  onChange={(event)=>{setText(event.target.value)}} placeholder="e.g. eggs"></input>
+        {text.length===0 ? <button className='form-button'  type='button'>Submit</button>:<button onClick={addBasket} type="button">Submit</button>}
+      </form></div>
+      
 
       {list.map((todoItem,index)=>{return <div key={index} className="item-list">
-        <div> {!todoItem.isEditable ? <p>{todoItem.todo}</p> :  <input value={editText} onChange={(event)=>setEditText(event.target.value)}></input>}
+        <div className='content-text'> {!todoItem.isEditable ? <p>{todoItem.todo}</p> :  <input className='input-edit' value={editText} onChange={(event)=>setEditText(event.target.value)}></input>}
             
         </div>
-        {!todoItem.isEditable ? <FaEdit onClick={()=>editItem(todoItem.id,todoItem.todo)}></FaEdit>:<FaRegSave onClick={()=>saveItem(todoItem.id)}></FaRegSave> } 
-        <FaRegTrashAlt onClick={()=>removeItem(todoItem.id)}></FaRegTrashAlt>
+        <div className='icons'>
+        {!todoItem.isEditable ? <FaEdit style={{color:"orange"}} onClick={()=>editItem(todoItem.id,todoItem.todo)}></FaEdit>:<FaRegSave onClick={()=>saveItem(todoItem.id)}></FaRegSave> } 
+        <FaRegTrashAlt style={{color:"red"}} onClick={()=>removeItem(todoItem.id)}></FaRegTrashAlt>
+        </div>
+        
         
      </div>})}
 
