@@ -1,0 +1,30 @@
+
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo{
+  height: 70px;
+  
+}
+
+
+
+
+.category{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.social-media{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
