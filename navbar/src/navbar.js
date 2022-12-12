@@ -22,9 +22,9 @@ export default function Navbar() {
         <div className="social-media">
             <ul>
                 <li>
-                <a href="wwww.facebook.com" target="_blank" ><FaFacebook/></a>
-                <a href="wwww.twitter.com"><FaTwitter/></a>
-                <a href="wwww.linkedin.com"><FaLinkedin/></a>
+                <a href="https://www.facebook.com" target="_blank" ><FaFacebook/></a>
+                <a href="https://twitter.com/home" target="_blank"><FaTwitter/></a>
+                <a href="https://www.linkedin.com" target="_blank"><FaLinkedin/></a>
 
                 </li>
             </ul>
