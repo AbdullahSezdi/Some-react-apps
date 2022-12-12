@@ -1,0 +1,80 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.App{
+    display: flex;
+    flex-direction: row;
+    justify-content:start;
+}
+
+.sidebar{
+    background-color: blue;
+    color:white;
+    width: 15%;
+    padding:10px;
+    height: 100vh;
+
+}
+
+.category{
+    padding: 20px;
+    font-size: 20px;
+    
+}
+.category span{
+    margin-left: 10px;
+    
+}
+
+.category li{
+    padding: 15px;
+    list-style-type: none;
+}
+.category li a{
+    text-decoration: none;
+    color: whitesmoke;  
+}
+
+.eth{
+    padding: 5px;
+    text-align: center;
+    width: 90%;
+    margin-left: 7px;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+.background{
+    width: 100vw;
+    height: 80vw;
+    background-color:rgba(200,200,200);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.container{
+    width: 400px;
+    height: 250px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin-top: 200px;
+}
+
+.modal-buton{
+    position:absolute;
+    left: 750px;
+    top: 150px;
+    height: 70px;
+    width: 100px;
+
+}
