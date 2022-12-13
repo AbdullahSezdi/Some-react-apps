@@ -15,7 +15,7 @@ function App() {
       {show &&<Sidebar></Sidebar> } 
     </div>
     <button className='modal-buton' onClick={()=>setModal(!modal)}>Open modal</button>
-    <Modal modal={modal}></Modal>
+    {modal && <Modal modal={setModal}></Modal>} 
     
     
     </div>
