@@ -5,7 +5,7 @@ export default function Box({text,number,sign}){
         <div className="box-body">
             <div className="box-content">
                 <p>{text}</p>
-                <span>{sign}</span><span>{number}</span>
+                <p><span>{sign}</span>{number}</p>
             </div>
 
         </div>
