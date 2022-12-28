@@ -1,5 +1,6 @@
 import './App.css';
 import TimeButon from './Component/timeButton';
+import SumLabel from './Component/sumLabel';
 import data from "./fakeData.js"
 import React, { useState,useEffect } from 'react';
 import Navbar from './Component/Navbar';
@@ -34,6 +35,8 @@ ChartJS.register(
 function App() {
   const [alotPrice,setAlotPrice]=useState()
   const [circulationSupply,setCirculationSupply]=useState(22350500)
+  const [lastTotalVolume,setLastTotalVolume]=useState(data[0].datasets[0].data.pop())
+  console.log("LastTotalVolume:",lastTotalVolume)
 
   const avarage=(data)=>{
     console.log(data)
@@ -71,32 +74,38 @@ function App() {
         <Box text="MARKETCAP" number={<NumericFormat value={alotPrice*circulationSupply} displayType={'text'} thousandSeparator={true} prefix={'$'} />}></Box>
     </div>
     <section className='graph'>
+
     <div className='chart-contain'>
+      <SumLabel data={<NumericFormat value={lastTotalVolume} displayType={'text'} thousandSeparator={true} />} text="Total Volume:" />
       <h2>Total Volume</h2>
-       <TimeButon></TimeButon>
+      <TimeButon></TimeButon>
       <Line className='chart' data={data[0]}></Line>
     </div>
+
+
     <div className='chart-contain'>
+      <SumLabel day="7" data={data[1]} text="days avarage:" avg={true}></SumLabel>
       <h2>Daily Volume</h2>
       <TimeButon></TimeButon>
-      <div className='avarage'><span>7 days average: ${avarage(data[1])}</span></div>
-      
       <Line className='chart' data={data[1]}></Line>
     </div>
+
     <div className='chart-contain'>
       <h2>Inflow - Outflow</h2>
       <Bar className='chart' data={data[3]}/>
     </div>
+
     <div className='chart-contain'>
+      <SumLabel day="7" data={data[2]} text="days avarage:" avg={true}></SumLabel>
       <h2>Alot Price</h2>
       <TimeButon></TimeButon>
-      <div className='avarage'><span>7 days average: ${avarage(data[2])}</span></div>
       <Line className='chart' data={data[2]}></Line>
     </div>
+
     <div className='chart-contain'>
+     <SumLabel day="7" data={data[4]} text="days avarage:" avg={true}></SumLabel>
       <h2>Daily Unique Users</h2>
       <TimeButon></TimeButon>
-      <div className='avarage'><span>7 days average: {avarage(data[4])}</span></div>
       <Bar className='chart' data={data[4]}/>
     </div>
  

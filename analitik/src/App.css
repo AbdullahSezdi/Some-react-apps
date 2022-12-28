@@ -3,6 +3,11 @@
   margin: 0px;
   background-color: black;
 }
+h2{
+  font-size:32px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
 
 
 .navbar{
@@ -100,4 +105,18 @@
   margin-top: 5px;
   width: 50px;
  
+}
+.sum-labels{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+}
+.sumlabel-content{
+  width: 175px;
+  background-color:#fb0082;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  padding: 5px;
 }
