@@ -36,7 +36,20 @@ function App() {
   const [alotPrice,setAlotPrice]=useState()
   const [circulationSupply,setCirculationSupply]=useState(22350500)
   const [lastTotalVolume,setLastTotalVolume]=useState(data[0].datasets[0].data.pop())
-  console.log("LastTotalVolume:",lastTotalVolume)
+  const [totalVolumeDay,setTotalVolumedays]=useState(360)
+  const [clone,setClone]=useState(false)
+  const totalVolumeCloneData=data[0]
+
+
+  useEffect(()=>{
+    const totalVolumeCloneData=data[0]
+    totalVolumeCloneData.datasets[0].data=data[0].datasets[0].data.slice(-totalVolumeDay)
+    totalVolumeCloneData.labels=data[0].labels.slice(-totalVolumeDay)
+
+  },[clone])
+
+  
+
 
   const avarage=(data)=>{
     console.log(data)
@@ -78,8 +91,8 @@ function App() {
     <div className='chart-contain'>
       <SumLabel data={<NumericFormat value={lastTotalVolume} displayType={'text'} thousandSeparator={true} />} text="Total Volume:" />
       <h2>Total Volume</h2>
-      <TimeButon></TimeButon>
-      <Line className='chart' data={data[0]}></Line>
+      <TimeButon setTotalVolumedays={setTotalVolumedays} clone={clone} setClone={setClone}></TimeButon>
+      <Line className='chart' data={totalVolumeCloneData}></Line>
     </div>
 
 
