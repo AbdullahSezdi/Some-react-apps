@@ -8,7 +8,7 @@
 .navbar{
   background-color: black;
   display: flex;
-  justify-content:space-between;
+  justify-content:space-evenly;
 }
 .navigation{
   padding: 10px;
@@ -25,6 +25,9 @@
   padding: 10px;
   text-decoration: none;
   color: aliceblue;
+}
+.navbar-content a:hover{
+  opacity: 0.8;
 }
 
 .box-body{
@@ -57,7 +60,10 @@
   gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
+  font-family: 'Poor Story', cursive;
+
 }
+
 
 .graph{
   width: 650px;
@@ -68,10 +74,30 @@
 }
 .chart{
   margin-top: 20px;
-  margin-bottom: 50px;
   background-color: rgb(0, 0, 0);
-  border-radius: 10px;
-  padding: 10px;
-  border:1px solid rgb(24, 24, 24);
+
+  
 }
 
+.chart-contain{
+  border:2px solid rgb(24, 24, 24);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom:40px;
+}
+
+.avarage{
+  text-align: end;
+}
+.avarage span{
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.button-time button{
+  color: antiquewhite;
+  padding: 5px;
+  margin-top: 5px;
+  width: 50px;
+ 
+}

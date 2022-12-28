@@ -1,4 +1,5 @@
 import './App.css';
+import TimeButon from './Component/timeButton';
 import data from "./fakeData.js"
 import React, { useState,useEffect } from 'react';
 import Navbar from './Component/Navbar';
@@ -34,7 +35,15 @@ function App() {
   const [alotPrice,setAlotPrice]=useState()
   const [circulationSupply,setCirculationSupply]=useState(22350500)
 
-  
+  const avarage=(data)=>{
+    console.log(data)
+    const lastSeven = data.datasets[0].data.slice(-7);
+    console.log(lastSeven)
+    const sum = lastSeven.reduce((partialSum, a) => partialSum + a, 0);
+    console.log(sum)
+    return (sum/7).toFixed(2);
+
+  }
 
   
 
@@ -62,19 +71,35 @@ function App() {
         <Box text="MARKETCAP" number={<NumericFormat value={alotPrice*circulationSupply} displayType={'text'} thousandSeparator={true} prefix={'$'} />}></Box>
     </div>
     <section className='graph'>
-    <h2>Total Volume</h2>
-    <Line className='chart' data={data[0]}></Line>
-    <h2>Daily Volume</h2>
-    <Line className='chart' data={data[1]}></Line>
-    <h2>Inflow - Outflow</h2>
-    <Bar className='chart' data={data[3]}/>
-    <h2>Alot Price</h2>
-    <Line className='chart' data={data[2]}></Line>
-    <h2>Daily Unique Users</h2>
-    <Bar className='chart' data={data[4]}/>
-   
-    
-
+    <div className='chart-contain'>
+      <h2>Total Volume</h2>
+       <TimeButon></TimeButon>
+      <Line className='chart' data={data[0]}></Line>
+    </div>
+    <div className='chart-contain'>
+      <h2>Daily Volume</h2>
+      <TimeButon></TimeButon>
+      <div className='avarage'><span>7 days average: ${avarage(data[1])}</span></div>
+      
+      <Line className='chart' data={data[1]}></Line>
+    </div>
+    <div className='chart-contain'>
+      <h2>Inflow - Outflow</h2>
+      <Bar className='chart' data={data[3]}/>
+    </div>
+    <div className='chart-contain'>
+      <h2>Alot Price</h2>
+      <TimeButon></TimeButon>
+      <div className='avarage'><span>7 days average: ${avarage(data[2])}</span></div>
+      <Line className='chart' data={data[2]}></Line>
+    </div>
+    <div className='chart-contain'>
+      <h2>Daily Unique Users</h2>
+      <TimeButon></TimeButon>
+      <div className='avarage'><span>7 days average: {avarage(data[4])}</span></div>
+      <Bar className='chart' data={data[4]}/>
+    </div>
+ 
     </section>
     
     
