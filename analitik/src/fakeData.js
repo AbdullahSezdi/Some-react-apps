@@ -2,7 +2,7 @@
 const FakeData=[
     {
     id:1,
-    labels:[0,
+    labels:[
         1,
         2,
         3,
@@ -361,7 +361,7 @@ const FakeData=[
         356,
         357,
         358,
-        359],
+        359,360],
     datasets:[{
       fill:{ target: "origin",above:"#ECE8DD"},
       label:"Total Volume",

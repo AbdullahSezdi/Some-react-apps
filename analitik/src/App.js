@@ -35,31 +35,30 @@ ChartJS.register(
 function App() {
   const [alotPrice,setAlotPrice]=useState()
   const [circulationSupply,setCirculationSupply]=useState(22350500)
-  const [lastTotalVolume,setLastTotalVolume]=useState(data[0].datasets[0].data.pop())
-  const [totalVolumeDay,setTotalVolumedays]=useState(360)
-  const [clone,setClone]=useState(false)
-  const totalVolumeCloneData=data[0]
+  const [lastTotalVolume,setLastTotalVolume]=useState(data[0].datasets[0].data.slice(-1))
+  const [totalVolumeDays,setTotalVolumeDays]=useState(360)
+  const[cloneVolumeData,setCloneVolumeData]=useState(data[0])
+ 
 
-
+  
   useEffect(()=>{
-    const totalVolumeCloneData=data[0]
-    totalVolumeCloneData.datasets[0].data=data[0].datasets[0].data.slice(-totalVolumeDay)
-    totalVolumeCloneData.labels=data[0].labels.slice(-totalVolumeDay)
+    console.log(cloneVolumeData)
+    cloneVolumeData.datasets.data= cloneVolumeData.datasets[0].data.slice(-(totalVolumeDays))
+    console.log(cloneVolumeData)
+    setCloneVolumeData(data[0])
+    console.log("Total volume days:",totalVolumeDays)
 
-  },[clone])
+  },[totalVolumeDays])
+
+
+
+
+
 
   
 
 
-  const avarage=(data)=>{
-    console.log(data)
-    const lastSeven = data.datasets[0].data.slice(-7);
-    console.log(lastSeven)
-    const sum = lastSeven.reduce((partialSum, a) => partialSum + a, 0);
-    console.log(sum)
-    return (sum/7).toFixed(2);
-
-  }
+  
 
   
 
@@ -89,10 +88,10 @@ function App() {
     <section className='graph'>
 
     <div className='chart-contain'>
-      <SumLabel data={<NumericFormat value={lastTotalVolume} displayType={'text'} thousandSeparator={true} />} text="Total Volume:" />
+    <SumLabel data={<NumericFormat value={lastTotalVolume[0]} displayType={'text'} thousandSeparator={true} />} text="Total Volume:" />
       <h2>Total Volume</h2>
-      <TimeButon setTotalVolumedays={setTotalVolumedays} clone={clone} setClone={setClone}></TimeButon>
-      <Line className='chart' data={totalVolumeCloneData}></Line>
+      <TimeButon setTotalVolumeDays={setTotalVolumeDays}></TimeButon>
+      <Line className='chart' data={cloneVolumeData}></Line>
     </div>
 
 
