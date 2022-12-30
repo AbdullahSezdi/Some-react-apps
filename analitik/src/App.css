@@ -113,10 +113,16 @@ h2{
   text-align: center;
 }
 .sumlabel-content{
-  width: 175px;
+  width: 200px;
   background-color:#fb0082;
   border-radius: 5px;
   text-align: center;
   align-items: center;
   padding: 5px;
+}
+
+.pie{
+  margin: auto;
+  height: 450px !important;;
+  width: 450px !important;;
 }

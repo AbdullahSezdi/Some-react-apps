@@ -1,10 +1,12 @@
+import { NumericFormat } from 'react-number-format';
 export default function SumLabel({day,data,text,avg}){
 
     const avarage=(day,data)=>{
 
         const lastDays = data.datasets[0].data.slice(-day);
         const sum = lastDays.reduce((partialSum, a) => partialSum + a, 0);
-        return (sum/day).toFixed(2);
+        const a=<NumericFormat value={(sum/day).toFixed(2)} displayType={'text'} thousandSeparator={true} />
+        return a;
     
       }
 
